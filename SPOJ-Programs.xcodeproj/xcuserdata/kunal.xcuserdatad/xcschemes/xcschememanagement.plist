@@ -4,10 +4,50 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ACPC10A.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 		<key>ADDREV.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
+		</dict>
+		<key>CANDY.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
+		<key>FASHION.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
+		<key>FCTRL.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>FCTRL2.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>NSTEPS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>ONP.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>SAMER08F.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
 		</dict>
 		<key>SPOJ-Programs.xcscheme</key>
 		<dict>
@@ -18,6 +58,11 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
+		</dict>
+		<key>TOANDFRO.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -33,6 +78,51 @@
 			<true/>
 		</dict>
 		<key>0C97B19E1D0E283F0081AF21</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0C97B1A91D0E2AC30081AF21</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0C97B1B41D0E2B150081AF21</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0C97B1BF1D0E2B480081AF21</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0C97B1CA1D0E2B6F0081AF21</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0C97B1D51D0E2B960081AF21</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0C97B1E01D0E2BE80081AF21</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0C97B1EB1D0E2C200081AF21</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0C97B1F61D0E2C460081AF21</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0C97B2011D0E2C820081AF21</key>
 		<dict>
 			<key>primary</key>
 			<true/>
