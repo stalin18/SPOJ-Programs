@@ -4,15 +4,35 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ADDREV.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>SPOJ-Programs.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>TEST.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>0C97B1741D0E1EEE0081AF21</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0C97B1931D0E28040081AF21</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0C97B19E1D0E283F0081AF21</key>
 		<dict>
 			<key>primary</key>
 			<true/>
