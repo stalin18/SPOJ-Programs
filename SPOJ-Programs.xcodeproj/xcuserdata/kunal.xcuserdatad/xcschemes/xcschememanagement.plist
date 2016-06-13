@@ -19,6 +19,11 @@
 			<key>orderHint</key>
 			<integer>9</integer>
 		</dict>
+		<key>DCEPC206.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
 		<key>FASHION.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -123,6 +128,11 @@
 			<true/>
 		</dict>
 		<key>0C97B2011D0E2C820081AF21</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0C97B20C1D0E2F2C0081AF21</key>
 		<dict>
 			<key>primary</key>
 			<true/>
