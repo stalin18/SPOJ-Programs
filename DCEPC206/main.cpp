@@ -10,7 +10,8 @@
 
 using namespace std;
 
-void merge(int arr[], int& sumArr, int l, int mid, int r){
+/* merge two sorted arrays */
+void merge(int arr[], long long& sumArr, int l, int mid, int r){
     // create two temp left and right arrays
     int n1 = mid-l+1;
     int n2 = r-(mid+1)+1;
@@ -27,11 +28,11 @@ void merge(int arr[], int& sumArr, int l, int mid, int r){
     
     // merge
     int i=0, j=0, k=l;
-    int adder = 0;
+    long long adder = 0;
     while(i<n1 && j<n2){
         if(left[i]<right[j]){
             // update adder with this num for future
-            adder += left[i];
+            adder += (long long)left[i];
             
             arr[k++] = left[i++];
         } else{
@@ -47,12 +48,13 @@ void merge(int arr[], int& sumArr, int l, int mid, int r){
     
     while(j<n2){
         // keep adding previous small nums for every element left
-        sumArr += adder;
+        sumArr += (long long)adder;
         arr[k++] = right[j++];
     }
 }
 
-void mergesort(int arr[], int& sumArr, int l, int r){
+/* partition array into two halves */
+void mergesort(int arr[], long long& sumArr, int l, int r){
     // if more than one element, then split into half and call recursively
     if(r>l){
         int mid = l + (r-l)/2;
@@ -65,13 +67,13 @@ void mergesort(int arr[], int& sumArr, int l, int r){
     }
 }
 
-int main(int argc, const char * argv[]) {
+int main() {
     // test-cases and number of integers
     int t, n;
     // array to hold integers, max 10^5
     int arr[100000];
-    // array to hold ans for each number
-    int sumArr;
+    // var to hold intermediate and final sum
+    long long sumArr;
 
     cin>>t;
     while(t--){
@@ -82,7 +84,7 @@ int main(int argc, const char * argv[]) {
         }
         
         // mergesort
-        sumArr = 0;
+        sumArr = 0L;
         mergesort(arr, sumArr, 0, n-1);
         
         cout<<sumArr<<endl;
