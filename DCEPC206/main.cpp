@@ -10,10 +10,10 @@
 
 using namespace std;
 
-void merge(int arr[], int sumArr[], int l, int mid, int r){
+void merge(int arr[], int& sumArr, int l, int mid, int r){
     // create two temp left and right arrays
     int n1 = mid-l+1;
-    int n2 = r-mid+1;
+    int n2 = r-(mid+1)+1;
     int left[n1];
     int right[n2];
     
@@ -27,48 +27,32 @@ void merge(int arr[], int sumArr[], int l, int mid, int r){
     
     // merge
     int i=0, j=0, k=l;
-    int leftAdder = 0;
-    int rightAdder = 0;
+    int adder = 0;
     while(i<n1 && j<n2){
-        if(left[i]<=right[j]){
-            // if element left[i] is strictly less, add it to sum of sumArr[k]
-            if(left[i]<right[j]){
-                //sumArr[k] += leftAdder;
-                // update adder with this num for future
-                leftAdder += left[i];
-                //sumArr[j] += leftAdder;
-                //rightAdder += left[i];
-            }
+        if(left[i]<right[j]){
+            // update adder with this num for future
+            adder += left[i];
             
-            arr[k] = left[i];
-            i++; k++;
+            arr[k++] = left[i++];
         } else{
             // add previous small numbers already stored in 'adder' to sumArr[k]
-            sumArr[k] += leftAdder;
-            // update adder with this num for future
-            //leftAdder += right[j];
-            
-            arr[k] = right[j];
-            j++; k++;
+            sumArr += adder;
+            arr[k++] = right[j++];
         }
     }
     
-    if(i<n1){
-        // add all small number's sum included in adder for first left-over element
-        //sumArr[k] += leftAdder;
-        //leftAdder += left[i];
+    while(i<n1){
         arr[k++] = left[i++];
     }
     
-    if(j<n2){
-        // add all small number's sum included in adder for first left-over element
-        sumArr[k] += leftAdder;
-        //leftAdder += right[j];
+    while(j<n2){
+        // keep adding previous small nums for every element left
+        sumArr += adder;
         arr[k++] = right[j++];
     }
 }
 
-void mergesort(int arr[], int sumArr[], int l, int r){
+void mergesort(int arr[], int& sumArr, int l, int r){
     // if more than one element, then split into half and call recursively
     if(r>l){
         int mid = l + (r-l)/2;
@@ -87,9 +71,8 @@ int main(int argc, const char * argv[]) {
     // array to hold integers, max 10^5
     int arr[100000];
     // array to hold ans for each number
-    int sumArr[100000] = {0};
-    int resultSum;
-    
+    int sumArr;
+
     cin>>t;
     while(t--){
         cin>>n;
@@ -99,16 +82,10 @@ int main(int argc, const char * argv[]) {
         }
         
         // mergesort
+        sumArr = 0;
         mergesort(arr, sumArr, 0, n-1);
         
-        // compute final ans
-        resultSum = 0;
-        for(int i=0;i<n;i++){
-            resultSum += sumArr[i];
-            cout<<sumArr[i]<<endl;
-        }
-        
-        cout<<resultSum<<endl;
+        cout<<sumArr<<endl;
     }
     
     return 0;
